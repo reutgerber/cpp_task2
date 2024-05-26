@@ -309,8 +309,8 @@ namespace ariel
 	}
 
 	Graph& Graph::operator/=(int divisor) {
-		if (divisor <= 0) {
-			throw std::invalid_argument("Divisor must be a positive integer");
+		if (divisor == 0) {
+			throw std::invalid_argument("Divisor can't be zero");
 		}
 		for (std::vector<int>::size_type i = 0; i < matrix.size(); ++i) {
 			for (std::vector<int>::size_type j = 0; j < matrix[0].size(); ++j) {
